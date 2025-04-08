@@ -16,3 +16,6 @@ def test_if_over_five_long():
 # test with punctuation
 def test_if_include_punctuation():
     assert make_snippet("one, two, three, four and five") == "one, two, three, four and...", 'returns truncated string if over five words long'
+# test for delimited by commas returns just as one word - ie only spaces count
+def test_delimited_by_commas_returns_string():
+    assert make_snippet("one,two,three,four,five,six") == "one,two,three,four,five,six", 'returns truncated string if over five words long'
